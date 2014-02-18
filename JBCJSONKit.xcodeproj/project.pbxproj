@@ -9,20 +9,25 @@
 /* Begin PBXBuildFile section */
 		16F135C318B2D861003BA6B3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135C218B2D861003BA6B3 /* Cocoa.framework */; };
 		16F135CD18B2D861003BA6B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16F135CB18B2D861003BA6B3 /* InfoPlist.strings */; };
-		16F135D118B2D861003BA6B3 /* JBCJSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F135D018B2D861003BA6B3 /* JBCJSONKit.m */; };
 		16F135D818B2D861003BA6B3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135D718B2D861003BA6B3 /* XCTest.framework */; };
 		16F135D918B2D861003BA6B3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135C218B2D861003BA6B3 /* Cocoa.framework */; };
 		16F135DC18B2D861003BA6B3 /* JBCJSONKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135BF18B2D861003BA6B3 /* JBCJSONKit.framework */; };
 		16F135E218B2D861003BA6B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16F135E018B2D861003BA6B3 /* InfoPlist.strings */; };
-		16F135E418B2D861003BA6B3 /* JBCJSONKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F135E318B2D861003BA6B3 /* JBCJSONKitTests.m */; };
 		16F135F318B2DC1D003BA6B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135F218B2DC1D003BA6B3 /* Foundation.framework */; };
 		16F1360018B2DC1D003BA6B3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135D718B2D861003BA6B3 /* XCTest.framework */; };
 		16F1360118B2DC1D003BA6B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135F218B2DC1D003BA6B3 /* Foundation.framework */; };
 		16F1360318B2DC1D003BA6B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F1360218B2DC1D003BA6B3 /* UIKit.framework */; };
 		16F1360618B2DC1D003BA6B3 /* libJBCJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135F118B2DC1D003BA6B3 /* libJBCJSONKit.a */; };
-		16F1361518B2DDD7003BA6B3 /* JBCJSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F135D018B2D861003BA6B3 /* JBCJSONKit.m */; };
 		16F1361618B2DDDC003BA6B3 /* JBCJSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F135CF18B2D861003BA6B3 /* JBCJSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		16F1361718B2DE16003BA6B3 /* JBCJSONKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F135E318B2D861003BA6B3 /* JBCJSONKitTests.m */; };
+		16F1361A18B2DFF5003BA6B3 /* JBCJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F1361818B2DFF5003BA6B3 /* JBCJSONSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16F1361B18B2DFF5003BA6B3 /* JBCJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F1361918B2DFF5003BA6B3 /* JBCJSONSerialization.m */; };
+		16F1361C18B2DFF5003BA6B3 /* JBCJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F1361918B2DFF5003BA6B3 /* JBCJSONSerialization.m */; };
+		16F1361E18B2E227003BA6B3 /* JBCJSONSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F1361D18B2E227003BA6B3 /* JBCJSONSerializationTests.m */; };
+		16F1361F18B2E227003BA6B3 /* JBCJSONSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F1361D18B2E227003BA6B3 /* JBCJSONSerializationTests.m */; };
+		16F1362118B3CE5C003BA6B3 /* zwibbler.json in Resources */ = {isa = PBXBuildFile; fileRef = 16F1362018B3CE5C003BA6B3 /* zwibbler.json */; };
+		16F1362218B3CE5C003BA6B3 /* zwibbler.json in Resources */ = {isa = PBXBuildFile; fileRef = 16F1362018B3CE5C003BA6B3 /* zwibbler.json */; };
+		16F1362418B3CE94003BA6B3 /* zwibbler.cjson in Resources */ = {isa = PBXBuildFile; fileRef = 16F1362318B3CE94003BA6B3 /* zwibbler.cjson */; };
+		16F1362518B3CE94003BA6B3 /* zwibbler.cjson in Resources */ = {isa = PBXBuildFile; fileRef = 16F1362318B3CE94003BA6B3 /* zwibbler.cjson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,16 +69,19 @@
 		16F135CC18B2D861003BA6B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16F135CE18B2D861003BA6B3 /* JBCJSONKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JBCJSONKit-Prefix.pch"; sourceTree = "<group>"; };
 		16F135CF18B2D861003BA6B3 /* JBCJSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBCJSONKit.h; sourceTree = "<group>"; };
-		16F135D018B2D861003BA6B3 /* JBCJSONKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBCJSONKit.m; sourceTree = "<group>"; };
 		16F135D618B2D861003BA6B3 /* JBCJSONKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JBCJSONKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F135D718B2D861003BA6B3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		16F135DF18B2D861003BA6B3 /* JBCJSONKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JBCJSONKitTests-Info.plist"; sourceTree = "<group>"; };
 		16F135E118B2D861003BA6B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		16F135E318B2D861003BA6B3 /* JBCJSONKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBCJSONKitTests.m; sourceTree = "<group>"; };
 		16F135F118B2DC1D003BA6B3 /* libJBCJSONKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJBCJSONKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F135F218B2DC1D003BA6B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16F135FF18B2DC1D003BA6B3 /* JBCJSONKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JBCJSONKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F1360218B2DC1D003BA6B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		16F1361818B2DFF5003BA6B3 /* JBCJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBCJSONSerialization.h; sourceTree = "<group>"; };
+		16F1361918B2DFF5003BA6B3 /* JBCJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBCJSONSerialization.m; sourceTree = "<group>"; };
+		16F1361D18B2E227003BA6B3 /* JBCJSONSerializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBCJSONSerializationTests.m; sourceTree = "<group>"; };
+		16F1362018B3CE5C003BA6B3 /* zwibbler.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zwibbler.json; sourceTree = "<group>"; };
+		16F1362318B3CE94003BA6B3 /* zwibbler.cjson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zwibbler.cjson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				16F135CF18B2D861003BA6B3 /* JBCJSONKit.h */,
-				16F135D018B2D861003BA6B3 /* JBCJSONKit.m */,
+				16F1361818B2DFF5003BA6B3 /* JBCJSONSerialization.h */,
+				16F1361918B2DFF5003BA6B3 /* JBCJSONSerialization.m */,
 				16F135C918B2D861003BA6B3 /* Supporting Files */,
 			);
 			path = JBCJSONKit;
@@ -183,7 +192,7 @@
 		16F135DD18B2D861003BA6B3 /* JBCJSONKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				16F135E318B2D861003BA6B3 /* JBCJSONKitTests.m */,
+				16F1361D18B2E227003BA6B3 /* JBCJSONSerializationTests.m */,
 				16F135DE18B2D861003BA6B3 /* Supporting Files */,
 			);
 			path = JBCJSONKitTests;
@@ -194,6 +203,8 @@
 			children = (
 				16F135DF18B2D861003BA6B3 /* JBCJSONKitTests-Info.plist */,
 				16F135E018B2D861003BA6B3 /* InfoPlist.strings */,
+				16F1362018B3CE5C003BA6B3 /* zwibbler.json */,
+				16F1362318B3CE94003BA6B3 /* zwibbler.cjson */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -206,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F1361618B2DDDC003BA6B3 /* JBCJSONKit.h in Headers */,
+				16F1361A18B2DFF5003BA6B3 /* JBCJSONSerialization.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +345,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F1362118B3CE5C003BA6B3 /* zwibbler.json in Resources */,
+				16F1362418B3CE94003BA6B3 /* zwibbler.cjson in Resources */,
 				16F135E218B2D861003BA6B3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +355,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F1362518B3CE94003BA6B3 /* zwibbler.cjson in Resources */,
+				16F1362218B3CE5C003BA6B3 /* zwibbler.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16F135D118B2D861003BA6B3 /* JBCJSONKit.m in Sources */,
+				16F1361B18B2DFF5003BA6B3 /* JBCJSONSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16F135E418B2D861003BA6B3 /* JBCJSONKitTests.m in Sources */,
+				16F1361E18B2E227003BA6B3 /* JBCJSONSerializationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16F1361518B2DDD7003BA6B3 /* JBCJSONKit.m in Sources */,
+				16F1361C18B2DFF5003BA6B3 /* JBCJSONSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16F1361718B2DE16003BA6B3 /* JBCJSONKitTests.m in Sources */,
+				16F1361F18B2E227003BA6B3 /* JBCJSONSerializationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

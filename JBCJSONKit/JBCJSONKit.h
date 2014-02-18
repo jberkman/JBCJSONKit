@@ -6,8 +6,4 @@
 //  Copyright (c) 2014 87k Networks. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface JBCJSONKit : NSObject
-
-@end
+#import <JBCJSONKit/JBCJSONSerialization.h>
