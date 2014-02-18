@@ -15,6 +15,14 @@
 		16F135DC18B2D861003BA6B3 /* JBCJSONKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135BF18B2D861003BA6B3 /* JBCJSONKit.framework */; };
 		16F135E218B2D861003BA6B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16F135E018B2D861003BA6B3 /* InfoPlist.strings */; };
 		16F135E418B2D861003BA6B3 /* JBCJSONKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F135E318B2D861003BA6B3 /* JBCJSONKitTests.m */; };
+		16F135F318B2DC1D003BA6B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135F218B2DC1D003BA6B3 /* Foundation.framework */; };
+		16F1360018B2DC1D003BA6B3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135D718B2D861003BA6B3 /* XCTest.framework */; };
+		16F1360118B2DC1D003BA6B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135F218B2DC1D003BA6B3 /* Foundation.framework */; };
+		16F1360318B2DC1D003BA6B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F1360218B2DC1D003BA6B3 /* UIKit.framework */; };
+		16F1360618B2DC1D003BA6B3 /* libJBCJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F135F118B2DC1D003BA6B3 /* libJBCJSONKit.a */; };
+		16F1361518B2DDD7003BA6B3 /* JBCJSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F135D018B2D861003BA6B3 /* JBCJSONKit.m */; };
+		16F1361618B2DDDC003BA6B3 /* JBCJSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F135CF18B2D861003BA6B3 /* JBCJSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16F1361718B2DE16003BA6B3 /* JBCJSONKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F135E318B2D861003BA6B3 /* JBCJSONKitTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +33,26 @@
 			remoteGlobalIDString = 16F135BE18B2D861003BA6B3;
 			remoteInfo = JBCJSONKit;
 		};
+		16F1360418B2DC1D003BA6B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16F135B618B2D861003BA6B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16F135F018B2DC1D003BA6B3;
+			remoteInfo = JBCJSONKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		16F135EF18B2DC1D003BA6B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		16F135BF18B2D861003BA6B3 /* JBCJSONKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JBCJSONKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +70,10 @@
 		16F135DF18B2D861003BA6B3 /* JBCJSONKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JBCJSONKitTests-Info.plist"; sourceTree = "<group>"; };
 		16F135E118B2D861003BA6B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16F135E318B2D861003BA6B3 /* JBCJSONKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBCJSONKitTests.m; sourceTree = "<group>"; };
+		16F135F118B2DC1D003BA6B3 /* libJBCJSONKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJBCJSONKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F135F218B2DC1D003BA6B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		16F135FF18B2DC1D003BA6B3 /* JBCJSONKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JBCJSONKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F1360218B2DC1D003BA6B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +95,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		16F135EE18B2DC1D003BA6B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F135F318B2DC1D003BA6B3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F135FC18B2DC1D003BA6B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F1360018B2DC1D003BA6B3 /* XCTest.framework in Frameworks */,
+				16F1360318B2DC1D003BA6B3 /* UIKit.framework in Frameworks */,
+				16F1360618B2DC1D003BA6B3 /* libJBCJSONKit.a in Frameworks */,
+				16F1360118B2DC1D003BA6B3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +132,8 @@
 			children = (
 				16F135BF18B2D861003BA6B3 /* JBCJSONKit.framework */,
 				16F135D618B2D861003BA6B3 /* JBCJSONKitTests.xctest */,
+				16F135F118B2DC1D003BA6B3 /* libJBCJSONKit.a */,
+				16F135FF18B2DC1D003BA6B3 /* JBCJSONKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +143,8 @@
 			children = (
 				16F135C218B2D861003BA6B3 /* Cocoa.framework */,
 				16F135D718B2D861003BA6B3 /* XCTest.framework */,
+				16F135F218B2DC1D003BA6B3 /* Foundation.framework */,
+				16F1360218B2DC1D003BA6B3 /* UIKit.framework */,
 				16F135C418B2D861003BA6B3 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -151,6 +205,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F1361618B2DDDC003BA6B3 /* JBCJSONKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +248,41 @@
 			productReference = 16F135D618B2D861003BA6B3 /* JBCJSONKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		16F135F018B2DC1D003BA6B3 /* libJBCJSONKit.a */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F1360F18B2DC1D003BA6B3 /* Build configuration list for PBXNativeTarget "libJBCJSONKit.a" */;
+			buildPhases = (
+				16F135ED18B2DC1D003BA6B3 /* Sources */,
+				16F135EE18B2DC1D003BA6B3 /* Frameworks */,
+				16F135EF18B2DC1D003BA6B3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libJBCJSONKit.a;
+			productName = JBCJSONKit;
+			productReference = 16F135F118B2DC1D003BA6B3 /* libJBCJSONKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		16F135FE18B2DC1D003BA6B3 /* JBCJSONKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F1361218B2DC1D003BA6B3 /* Build configuration list for PBXNativeTarget "JBCJSONKitTests" */;
+			buildPhases = (
+				16F135FB18B2DC1D003BA6B3 /* Sources */,
+				16F135FC18B2DC1D003BA6B3 /* Frameworks */,
+				16F135FD18B2DC1D003BA6B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16F1360518B2DC1D003BA6B3 /* PBXTargetDependency */,
+			);
+			name = JBCJSONKitTests;
+			productName = JBCJSONKitTests;
+			productReference = 16F135FF18B2DC1D003BA6B3 /* JBCJSONKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,6 +293,9 @@
 				ORGANIZATIONNAME = "87k Networks";
 				TargetAttributes = {
 					16F135D518B2D861003BA6B3 = {
+						TestTargetID = 16F135BE18B2D861003BA6B3;
+					};
+					16F135FE18B2DC1D003BA6B3 = {
 						TestTargetID = 16F135BE18B2D861003BA6B3;
 					};
 				};
@@ -221,6 +314,8 @@
 			targets = (
 				16F135BE18B2D861003BA6B3 /* JBCJSONKit.framework */,
 				16F135D518B2D861003BA6B3 /* JBCJSONKitTests */,
+				16F135F018B2DC1D003BA6B3 /* libJBCJSONKit.a */,
+				16F135FE18B2DC1D003BA6B3 /* JBCJSONKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +334,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F135E218B2D861003BA6B3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F135FD18B2DC1D003BA6B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +363,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		16F135ED18B2DC1D003BA6B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F1361518B2DDD7003BA6B3 /* JBCJSONKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F135FB18B2DC1D003BA6B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F1361718B2DE16003BA6B3 /* JBCJSONKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -268,6 +386,11 @@
 			isa = PBXTargetDependency;
 			target = 16F135BE18B2D861003BA6B3 /* JBCJSONKit.framework */;
 			targetProxy = 16F135DA18B2D861003BA6B3 /* PBXContainerItemProxy */;
+		};
+		16F1360518B2DC1D003BA6B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16F135F018B2DC1D003BA6B3 /* libJBCJSONKit.a */;
+			targetProxy = 16F1360418B2DC1D003BA6B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -429,6 +552,92 @@
 			};
 			name = Release;
 		};
+		16F1361018B2DC1D003BA6B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				DSTROOT = /tmp/JBCJSONKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JBCJSONKit/JBCJSONKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = JBCJSONKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		16F1361118B2DC1D003BA6B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				DSTROOT = /tmp/JBCJSONKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JBCJSONKit/JBCJSONKit-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = JBCJSONKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16F1361318B2DC1D003BA6B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JBCJSONKit.framework/Versions/A/JBCJSONKit";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JBCJSONKit/JBCJSONKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "JBCJSONKitTests/JBCJSONKitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		16F1361418B2DC1D003BA6B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JBCJSONKit.framework/Versions/A/JBCJSONKit";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JBCJSONKit/JBCJSONKit-Prefix.pch";
+				INFOPLIST_FILE = "JBCJSONKitTests/JBCJSONKitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -454,6 +663,22 @@
 			buildConfigurations = (
 				16F135EB18B2D861003BA6B3 /* Debug */,
 				16F135EC18B2D861003BA6B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		16F1360F18B2DC1D003BA6B3 /* Build configuration list for PBXNativeTarget "libJBCJSONKit.a" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F1361018B2DC1D003BA6B3 /* Debug */,
+				16F1361118B2DC1D003BA6B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		16F1361218B2DC1D003BA6B3 /* Build configuration list for PBXNativeTarget "JBCJSONKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F1361318B2DC1D003BA6B3 /* Debug */,
+				16F1361418B2DC1D003BA6B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

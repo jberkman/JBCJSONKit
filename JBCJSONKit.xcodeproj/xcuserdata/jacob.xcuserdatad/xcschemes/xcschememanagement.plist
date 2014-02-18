@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>libJBCJSONKit.a.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>16F135D518B2D861003BA6B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>16F135F018B2DC1D003BA6B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>16F135FE18B2DC1D003BA6B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
