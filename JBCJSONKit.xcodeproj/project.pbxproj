@@ -157,9 +157,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		16F135BE18B2D861003BA6B3 /* JBCJSONKit */ = {
+		16F135BE18B2D861003BA6B3 /* JBCJSONKit.framework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16F135E718B2D861003BA6B3 /* Build configuration list for PBXNativeTarget "JBCJSONKit" */;
+			buildConfigurationList = 16F135E718B2D861003BA6B3 /* Build configuration list for PBXNativeTarget "JBCJSONKit.framework" */;
 			buildPhases = (
 				16F135BA18B2D861003BA6B3 /* Sources */,
 				16F135BB18B2D861003BA6B3 /* Frameworks */,
@@ -170,7 +170,7 @@
 			);
 			dependencies = (
 			);
-			name = JBCJSONKit;
+			name = JBCJSONKit.framework;
 			productName = JBCJSONKit;
 			productReference = 16F135BF18B2D861003BA6B3 /* JBCJSONKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -219,7 +219,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				16F135BE18B2D861003BA6B3 /* JBCJSONKit */,
+				16F135BE18B2D861003BA6B3 /* JBCJSONKit.framework */,
 				16F135D518B2D861003BA6B3 /* JBCJSONKitTests */,
 			);
 		};
@@ -266,7 +266,7 @@
 /* Begin PBXTargetDependency section */
 		16F135DB18B2D861003BA6B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 16F135BE18B2D861003BA6B3 /* JBCJSONKit */;
+			target = 16F135BE18B2D861003BA6B3 /* JBCJSONKit.framework */;
 			targetProxy = 16F135DA18B2D861003BA6B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -369,7 +369,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JBCJSONKit/JBCJSONKit-Prefix.pch";
 				INFOPLIST_FILE = "JBCJSONKit/JBCJSONKit-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JBCJSONKit;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -384,7 +384,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JBCJSONKit/JBCJSONKit-Prefix.pch";
 				INFOPLIST_FILE = "JBCJSONKit/JBCJSONKit-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JBCJSONKit;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -441,7 +441,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16F135E718B2D861003BA6B3 /* Build configuration list for PBXNativeTarget "JBCJSONKit" */ = {
+		16F135E718B2D861003BA6B3 /* Build configuration list for PBXNativeTarget "JBCJSONKit.framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				16F135E818B2D861003BA6B3 /* Debug */,

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "16F135BE18B2D861003BA6B3"
                BuildableName = "JBCJSONKit.framework"
-               BlueprintName = "JBCJSONKit"
+               BlueprintName = "JBCJSONKit.framework"
                ReferencedContainer = "container:JBCJSONKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
