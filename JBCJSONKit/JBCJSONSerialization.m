@@ -15,11 +15,6 @@ static NSString * const ValueKey = @"v";
 
 static NSString * const CJSONFormat = @"cjson";
 
-@interface JBCJSONSerialization ()
-+ (id)JSONObjectWithCJSONObject:(id)obj;
-+ (id)CJSONObjectWithJSONObject:(id)obj;
-@end
-
 @interface JBCJSONNode : NSObject
 @property (nonatomic, weak) JBCJSONNode *parent;
 @property (nonatomic, strong) NSString *key;
@@ -144,29 +139,21 @@ static NSString * const CJSONFormat = @"cjson";
                                error:error];
 }
 
-+ (void)expandObject:(id)obj
-              values:(NSEnumerator *)values
-       templateIndex:(NSUInteger)templateIndex
-           templates:(NSArray *)templates
++ (NSInteger)writeJSONObject:(id)obj
+                    toStream:(NSOutputStream *)stream
+                     options:(NSJSONWritingOptions)opt
+                       error:(NSError *__autoreleasing *)error
 {
-    if (!templateIndex) {
-        return;
-    }
-    [templates[templateIndex - 1] enumerateObjectsUsingBlock:^(id key, NSUInteger idx, BOOL *stop) {
-        if (idx) {
-            obj[key] = [self expandValue:values.nextObject
-                               templates:templates];
-        } else {
-            [self expandObject:obj
-                        values:values
-                 templateIndex:[key unsignedIntegerValue]
-                     templates:templates];
-        }
-    }];
+    return [super writeJSONObject:[self CJSONObjectWithJSONObject:obj]
+                         toStream:stream
+                          options:opt
+                            error:error];
 }
 
 + (id)expandValue:(id)value
         templates:(NSArray *)templates
+          options:(NSJSONReadingOptions)opts
+            error:(NSError * __autoreleasing *)error
 {
     if ([value isKindOfClass:[NSArray class]]) {
         NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[value count]];
@@ -174,29 +161,51 @@ static NSString * const CJSONFormat = @"cjson";
                                 usingBlock:^(id obj, NSUInteger idx, BOOL *stop)
          {
              ret[idx] = [self expandValue:obj
-                                templates:templates];
+                                templates:templates
+                                  options:opts
+                                    error:error];
          }];
-        value = ret;
+        return (opts & NSJSONReadingMutableContainers) ? ret : [NSArray arrayWithArray:ret];
     } else if ([value isKindOfClass:[NSDictionary class]]) {
-        NSMutableDictionary *ret = [NSMutableDictionary new];
-        NSEnumerator *values = [value[ObjectValueKey] objectEnumerator];
-        [self expandObject:ret
-                    values:values
-             templateIndex:[values.nextObject unsignedIntegerValue]
-                 templates:templates];
-        value = ret;
+        NSArray *values = value[ObjectValueKey];
+        NSNumber *templateIndex = values.firstObject;
+        values = [self expandValue:[values subarrayWithRange:NSMakeRange(1, values.count - 1)]
+                         templates:templates
+                           options:opts
+                             error:error];
+        id dict = (opts & NSJSONReadingMutableContainers) ? [NSMutableDictionary class] : [NSDictionary class];
+        return [dict dictionaryWithObjects:values
+                                   forKeys:templates[templateIndex.unsignedIntegerValue]];
     }
     return value;
 }
 
++ (NSArray *)expandTemplates:(NSArray *)templates
+{
+    NSMutableArray *ret = [NSMutableArray arrayWithCapacity:templates.count + 1];
+    ret[0] = @[];
+    [templates enumerateObjectsUsingBlock:^(NSArray *template, NSUInteger idx, BOOL *stop) {
+        NSNumber *templateIndex = template.firstObject;
+        NSArray *newTemplate = ret[templateIndex.unsignedIntegerValue];
+        NSArray *newKeys = [template subarrayWithRange:NSMakeRange(1, template.count - 1)];
+        [ret addObject:[newTemplate arrayByAddingObjectsFromArray:newKeys]];
+    }];
+    // Immutify.
+    return [NSArray arrayWithArray:ret];
+}
+
 + (id)JSONObjectWithCJSONObject:(id)obj
+                        options:(NSJSONReadingOptions)opt
+                          error:(NSError * __autoreleasing *)error
 {
     if (![obj isKindOfClass:[NSDictionary class]] ||
         ![CJSONFormat isEqual:obj[FormatKey]]) {
         return obj;
     }
     return [self expandValue:obj[ValueKey]
-                   templates:obj[TemplateKey]];
+                   templates:[self expandTemplates:obj[TemplateKey]]
+                     options:opt
+                       error:error];
 }
 
 + (id)JSONObjectWithData:(NSData *)data
@@ -205,7 +214,20 @@ static NSString * const CJSONFormat = @"cjson";
 {
     return [self JSONObjectWithCJSONObject:[super JSONObjectWithData:data
                                                              options:opt
-                                                               error:error]];
+                                                               error:error]
+                                   options:opt
+                                     error:error];
+}
+
++ (id)JSONObjectWithStream:(NSInputStream *)stream
+                   options:(NSJSONReadingOptions)opt
+                     error:(NSError *__autoreleasing *)error
+{
+    return [self JSONObjectWithCJSONObject:[super JSONObjectWithStream:stream
+                                                               options:opt
+                                                                 error:error]
+                                   options:opt
+                                     error:error];
 }
 
 @end
